@@ -7,14 +7,12 @@ signup.addEventListener("submit", function (e) {
     const lastname = document.getElementById("lastname").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
-    const phonenumber = document.getElementById("phoneNumber").value; 
     
     let user = {
           firstname: firstname,
           lastname: lastname,
           email: email,
           password: password,
-          phonenumber: phonenumber,
         };
     let json = JSON.stringify(user);
     localStorage.setItem("user", json); 
