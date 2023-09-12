@@ -1,60 +1,3 @@
-
-// const signup = document.getElementById("signup");
-// const signin = document.getElementById("signin");
-
-// signup.addEventListener("submit", function (e) {
-//     e.preventDefault();
-//     const firstname = document.getElementById("firstname").value;
-//     const lastname = document.getElementById("lastname").value;
-//     const email = document.getElementById("email").value;
-//     const password = document.getElementById("password").value;
-//     const phonenumber = document.getElementById("phonenumber").value;
-    
-//     let user = {
-//           firstname: firstname,
-//           lastname: lastname,
-//           username: username,
-//           email: email,
-//           password: password,
-//           phonenumber: phonenumber,
-//         };
-//         let json = JSON.stringify(user);
-//         localStorage.setItem("user", json);
-  
-//     signup.reset();
-    
-//     alert("Sign up successful. Please sign in.");
-// });
-
-// // Handle signin form submission
-// signin.addEventListener("submit", function (e) {
-//     e.preventDefault();
-    
-//     const firstname = document.getElementById("firstname").value;
-//     const lastname = document.getElementById("lastname").value;
-//     const email = document.getElementById("email").value;
-//     const password = document.getElementById("password").value;
-//     const phonenumber = document.getElementById("phonenumber").value;
-    
-//     let user = {
-//           firstname: firstname,
-//           lastname: lastname,
-//           username: username,
-//           email: email,
-//           password: password,
-//           phonenumber: phonenumber,
-//         };
-//         let json = JSON.stringify(user);
-    
-//     if (localStorage.getItem(json)) {
-//         alert("Sign in successful. Welcome, " + username + "!");
-//     } else {
-//         alert("Please try again.");
-//     }
-    
-//     signin.reset();
-// });
-
 const signup = document.getElementById("signup");
 const signin = document.getElementById("signin");
 
@@ -64,7 +7,7 @@ signup.addEventListener("submit", function (e) {
     const lastname = document.getElementById("lastname").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
-    const phonenumber = document.getElementById("phoneNumber").value; // Corrected ID
+    const phonenumber = document.getElementById("phoneNumber").value; 
     
     let user = {
           firstname: firstname,
@@ -74,21 +17,19 @@ signup.addEventListener("submit", function (e) {
           phonenumber: phonenumber,
         };
     let json = JSON.stringify(user);
-    localStorage.setItem("user", json); // Use a string as the key
+    localStorage.setItem("user", json); 
   
     signup.reset();
     
     alert("Sign up successful. Please sign in.");
 });
 
-// Handle signin form submission
 signin.addEventListener("submit", function (e) {
     e.preventDefault();
     
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     
-    // Retrieve the user data from localStorage
     const storedUser = localStorage.getItem("user");
     
     if (storedUser) {
