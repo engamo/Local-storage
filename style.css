@@ -37,7 +37,9 @@ form {
   flex-direction: column;
   gap: 10px;
 }
-
+a {
+  color: #110e0e;
+}
 input[type="text"],
 input[type="password"],
 input[type="number"],
